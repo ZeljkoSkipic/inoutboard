@@ -1,0 +1,45 @@
+.st_contact {
+	&::after {
+		content: "";
+		background-image: url(../images/testimonials-bg.svg);
+		width: var(--site-width);
+		max-width: var(--site-max-width);
+		height: 13px;
+		display: block;
+		margin-inline: auto;
+		position: relative;
+	}
+}
+
+.st_contact_inner {
+	@include flex;
+	padding-inline: 32px;
+	max-width: 2560px;
+	margin-inline: auto;
+	@include mob-only {
+		padding-inline: 25px;
+	}
+	@include limbo-min {
+		> div {
+			width: 48%;
+		}
+	}
+	.left {
+		@include tab-max {
+			order: 2;
+		}
+	}
+	.right {
+		max-width: 57rem;
+		padding-block: var(--space-4);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include limbo-min {
+			padding-left: 8rem;
+		}
+		@include tab-max {
+			order: 1;
+		}
+	}
+}

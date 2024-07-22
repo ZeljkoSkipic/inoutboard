@@ -1,0 +1,66 @@
+{
+    "key": "group_63494c81e30ef",
+    "title": "Component: Spacing",
+    "fields": [
+        {
+            "key": "field_63494c82c44a1",
+            "label": "Padding",
+            "name": "padding",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Padding settings are applied only to Top and Bottom values",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "space_4": "Small",
+                "space_3": "Medium",
+                "space_2": "Large",
+                "space_1": "Huge",
+                "": "",
+                "space_4_3": "Small\/Medium",
+                "space_4_2": "Small\/Large",
+                "space_4_1": "Small\/Huge",
+                "space_3_4": "Medium\/Small",
+                "space_3_2": "Medium\/Large",
+                "space_3_1": "Medium\/Huge",
+                "space_2_4": "Large\/Small",
+                "space_2_3": "Large\/Medium",
+                "space_2_1": "Large\/Huge",
+                "space_1_4": "Huge\/Small",
+                "space_1_3": "Huge\/Medium",
+                "space_1_2": "Huge\/Large"
+            },
+            "default_value": "space_3",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1717068378
+}

@@ -1,0 +1,123 @@
+footer {
+	.footer_top {
+		background-color: var(--bg-dark);
+		padding: var(--space-2);
+		border-radius: 12px;
+		transform: translateY(13rem);
+		margin-top: -13rem;
+		display: flex;
+		justify-content: space-between;
+		background-image: url(../images/footer-top-bg.svg);
+		background-repeat: no-repeat;
+		background-position: top right;
+		background-size: auto 100%;
+		@include limbo-min {
+			align-items: flex-end;
+		}
+		@include tab-max {
+			flex-direction: column;
+		}
+		@include mob-only {
+			padding: var(--space-4);
+		}
+		.footer_top_title {
+			font-size: 4rem;
+			color: #fff;
+		}
+		.footer_top_text {
+			max-width: 51rem;
+			color: #EAECF0;
+			p {
+				margin-bottom: 0;
+			}
+		}
+		.footer_top_right {
+			@include limbo-min {
+				margin-left: 3rem;
+			}
+			@include tab-max {
+				margin-top: 32px;
+			}
+		}
+	}
+	.footer_main {
+		background-color: var(--color-4);
+		padding-block: 24rem var(--space-3);
+		@include tab-max {
+			padding-bottom: var(--space-4)
+		}
+		.container {
+			display: grid;
+			column-gap: 30px;
+			@include limbo-min {
+				grid-template-columns: repeat(5, 1fr);
+			}
+			@include tab-only {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+		.footer_menu {
+			@include mob-only {
+				width: 100%;
+			}
+			@include tab-max {
+				margin-bottom: 3rem;
+			}
+			h3 {
+				font-size: 16px;
+				color: #98A2B3;
+				font-weight: 500;
+				margin-bottom: 16px;
+			}
+			ul {
+				@include clean-list;
+				li {
+					margin-bottom: 16px;
+					a {
+						color: #fff;
+						font-family: Secondary, sans-serif;
+						font-size: 16px;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+	.footer_bottom {
+		background-color: var(--color-4);
+		padding-bottom: var(--space-5);
+		.container {
+			@include flex-between;
+			@include tab-max {
+				flex-direction: column;
+				> div {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
+		.footer_logo {
+			max-width: 150px;
+		}
+		.copy {
+			color: #98A2B3;
+			font-family: Secondary, sans-serif;
+			font-size: 16px;
+			@include tab-max {
+				margin-bottom: 2.4rem;
+			}
+		}
+		.socials {
+			a {
+				width: 20px;
+				display: inline-flex;
+				svg {
+					width: 100%;
+				}
+				&:not(:last-child) {
+					margin-right: 24px;
+				}
+			}
+		}
+	}
+}

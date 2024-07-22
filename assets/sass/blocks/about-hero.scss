@@ -1,0 +1,27 @@
+.st_about_hero {
+	.st_intro {
+		text-align: center;
+	}
+	.st_about_hero_bottom {
+		padding-top: var(--space-1);
+		@include flex-between;
+		@include mob-only {
+			padding-top: var(--space-2);
+		}
+		.left {
+			@include limbo-min {
+				width: 30%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				transform: translateY(-4rem);
+			}
+		}
+		.right {
+			@include limbo-min {
+				width: 66%;
+			}
+		}
+	}
+
+}

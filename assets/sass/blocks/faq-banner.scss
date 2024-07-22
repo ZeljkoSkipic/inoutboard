@@ -1,0 +1,30 @@
+.st_faq_banner {
+
+	.st_intro {
+		@include limbo-min {
+			margin-bottom: 0
+		}
+	}
+	.intro_title {
+		font-size: var(--font-size-3);
+	}
+	.container {
+		@include flex-between;
+		align-items: center;
+		background-image: url(../icons/help-center-icon.svg);
+		background-repeat: no-repeat;
+		background-size: 6rem;
+		@include limbo-min {
+			background-position: center left;
+			padding-left: 8rem;
+		}
+		@include tab-max {
+			background-position: top left;
+			padding-top: 8rem;
+		}
+		p {
+			margin-top: 8px;
+			margin-bottom: 0;
+		}
+	}
+}

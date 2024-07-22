@@ -1,0 +1,187 @@
+.posts_grid {
+	@include flex-between;
+	h1 {
+		width: 100%;
+	}
+	.grid_item {
+		width: 31%;
+		margin-bottom: 3%;
+		@include tab-only {
+			width: 48%;
+		}
+		@include mob-only {
+			width: 100%;
+		}
+		.gi_image {
+			aspect-ratio: 16 / 9;
+		}
+	}
+	.posts-navigation {
+		width: 100%;
+		.nav-links {
+			@include flex-between;
+		}
+	}
+}
+
+// Help Center Archive
+
+.help_articles_hero {
+	text-align: center;
+	background-image: url(../images/hc_hero_bg.svg);
+	background-color: var(--bg-dark);
+	padding-block: var(--space-3);
+	background-repeat: no-repeat;
+	background-position: center left;
+	max-width: 2560px;
+	margin-inline: auto;
+	.hc_hero_subtitle {
+		color: #fff;
+		font-size: 5.6rem;
+	}
+}
+
+
+.hc_topics_title {
+	text-align: center;
+	width: 100%;
+	margin-bottom: var(--space-5);
+	font-family: Primary, sans-serif;
+}
+
+.help_articles_inner {
+	@include flex;
+	justify-content: center;
+	.help_article {
+		border-radius: 10px;
+		margin-bottom: 4rem;
+		text-align: center;
+		box-sizing: border-box;
+		transition: var(--st);
+		@include limbo-min {
+			width: 23%;
+			&:not(:nth-child(4n + 4)) {
+				margin-right: calc(8% / 3);
+			}
+		}
+		@include tab-only {
+			width: 48%;
+			&:nth-child(odd):not(:last-child) {
+				margin-right: 4%;
+			}
+		}
+		@include mob-only {
+			width: 100%;
+		}
+		&:hover {
+			filter: drop-shadow(2.5px 2.5px 5px rgba(0, 174, 239, .35));
+		}
+	}
+	.help_article {
+		border: 2px solid #EAECF0;
+		padding: 32px 20px;
+		figure {
+			margin-bottom: 20px;
+			width: 100%;
+			height: auto;
+			height: 72px;
+			.topic_icon {
+				object-fit: contain;
+				max-width: 88px;
+				max-height: 100%;
+			}
+		}
+		.topic_title {
+			margin-bottom: 8px;
+			font-size: 18px;
+		}
+		.topic_description {
+			font-size: 14px;
+			color: #475467;
+			font-family: Secondary, sans-serif;
+		}
+	}
+}
+.help_articles_banner {
+	background-color: var(--bg-light);
+	padding: var(--space-5);
+	.help_articles_banner_inner {
+		@include flex-between;
+		align-items: center;
+		max-width: 980px;
+		margin-inline: auto;
+	}
+	p {
+		margin: 0;
+		font-size: var(--font-size-3);
+		font-weight: 700;
+		color: var(--t-color);
+	}
+}
+
+
+// Article Topic - Category
+.help_articles_category {
+	@include flex-between;
+	align-items: flex-start;
+}
+
+.help_articles_category_inner {
+	border: 2px solid #EAECF0;
+	border-radius: 10px;
+	@include limbo-min {
+		width: calc(100% - 320px);
+		position: sticky;
+		top: 70px;
+	}
+	@include tab-max {
+		width: 100%;
+	}
+
+	.ha_head {
+		@include flex-between;
+		align-items: center;
+		padding: 32px;
+		border-bottom: 2px solid #eaecf0;
+		@include mob-only {
+			flex-direction: column;
+		}
+		.left {
+			max-width: 80px;
+		}
+		.right {
+			color: #98A2B3;
+			font-size: 18px;
+			font-weight: 600;
+			font-family: Secondary, sans-serif;
+		}
+	}
+	.ha_article {
+		&:not(:last-child) {
+			border-bottom: 2px solid #eaecf0;
+		}
+		width: calc(100% - 64px);
+		margin-inline: auto;
+		padding-block: 32px;
+		.article_title {
+			font-size: 18px;
+			padding: 0;
+			padding-right: 32px;
+			background-image: url(../icons/plus-circle.svg);
+			background-size: 21px;
+		}
+		.article_content {
+			font-size: 16px;
+			padding-top: 32px;
+			display: none;
+			.wp-block-image img {
+				width: auto;
+			}
+		}
+		&.open {
+			.article_title {
+				background-image: url(../icons/minus-circle.svg);
+			}
+		}
+	}
+}

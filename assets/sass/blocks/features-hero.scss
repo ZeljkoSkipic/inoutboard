@@ -1,0 +1,27 @@
+.st_features_hero {
+	text-align: center;
+
+	.block_bg {
+		img {
+			object-position: left center;
+			object-fit: contain;
+		}
+	}
+	.intro_title {
+		font-size: 5.6rem;
+		@include mob-only {
+			font-size: 4.6rem;
+		}
+	}
+}
+.st_features_hero_bottom {
+	padding-block: var(--space-4);
+	background-color: var(--bg-light);
+	figure {
+		text-align: center;
+		.testimonials_image {
+			width: 37rem;
+			max-width: 90%;
+		}
+	}
+}

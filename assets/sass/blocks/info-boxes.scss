@@ -1,0 +1,243 @@
+.st_info_boxes {
+	.st_info_boxes_inner {
+		.st_col {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.st_col_text {
+			font-size: 14px;
+			font-family: Secondary, sans-serif;
+			margin-bottom: 24px;
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.learn_more {
+			font-size: 16px;
+			font-weight: 600;
+			color: #98A2B3;
+			font-family: Secondary, sans-serif;
+			transition: var(--st);
+			margin-top: auto;
+			&:hover {
+				svg {
+					margin-left: 8px;
+				}
+			}
+			svg {
+				path {
+					stroke: #98A2B3;
+				}
+			}
+		}
+	}
+	&.style-1 {
+		.st_info_boxes_inner {
+			margin-top: -16px;
+			position: relative;
+			@include tab-min {
+				padding-right: calc(7.5rem - 16px);
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				top: calc(-7.5rem + 16px);
+				right: 0;
+				background-image: url(../icons/ib-shape.svg);
+				width: 15rem;
+				height: 15rem;
+				z-index: -1;
+			}
+		}
+		.st_col {
+			border-radius: 12px;
+			transition: var(--st);
+			padding: 16px;
+			svg, path {
+				transition: var(--st);
+			}
+			&:hover {
+				background-color: var(--bg-light);
+				.learn_more {
+					color: var(--t-color);
+				}
+				path {
+					stroke: var(--t-color);
+				}
+			}
+		}
+		.st_intro {
+			text-align: center
+		}
+		.ib_image {
+			aspect-ratio: 280 / 180;
+			margin-bottom: 18px;
+			border-radius: 4px;
+		}
+		.st_col_title {
+			font-size: 18px;
+		}
+		.st_col_text {
+			font-size: 14px;
+		}
+	}
+	&.style-2 {
+		.st_info_boxes_inner {
+			gap: 32px;
+		}
+		@include mob-only {
+			.st_col {
+				margin-bottom: 2%;
+			}
+		}
+		.block_bg {
+			img {
+				object-fit: contain;
+				object-position: center right;
+			}
+		}
+		.ib_image {
+			max-width: 88px;
+			max-height: 57px;
+			object-fit: contain;
+			object-position: left;
+			margin-bottom: 33px;
+			@include mob-only {
+				margin-bottom: 2rem;
+			}
+		}
+		.st_col_title {
+			color: #fff;
+			font-size: 20px;
+		}
+		.st_col_text {
+			color: #EAECF0;
+			font-size: 16px;
+		}
+	}
+	&.style-3 {
+		.container {
+			position: relative;
+			&::before {
+				position: absolute;
+				content: "";
+				background-image: url(../images/who-is-it-for-bg.svg);
+				background-repeat: no-repeat;
+				background-position: right top;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				right: -10rem;
+				z-index: -1;
+				@include tab-max {
+					right: 0;
+				}
+			}
+		}
+		.ib_banner {
+			border-radius: 12px;
+		}
+		.st_info_boxes_inner {
+			gap: 32px;
+		}
+		.column {
+			border-radius: 12px;
+			border: 2px solid #EAECF0;
+			padding: 24px;
+		}
+		.ib_intro_subtitle {
+			margin-top: var(--space-2);
+			font-size: 3.2rem;
+			line-height: 1.3;
+			color: var(--t-color);
+			font-weight: 700;
+			margin-bottom: 4.8rem;
+			@include limbo-min {
+				max-width: 100rem;
+				margin-inline: auto;
+				text-align: center;
+			}
+		}
+		.ib_image {
+			max-width: 98px;
+			max-height: 72px;
+			object-fit: contain;
+			object-position: left;
+			margin-bottom: 19px;
+			@include mob-only {
+				margin-bottom: 2rem;
+			}
+		}
+		.st_col_text {
+			color: #000;
+			font-size: 18px;
+		}
+	}
+	&.style-4 {
+		.st_col {
+			margin-bottom: var(--space-5);
+			padding-left: 3rem;
+			@include flex;
+			justify-content: center;
+			position: relative;
+			&::before {
+				content: "";
+				width: 8px;
+				height: 8px;
+				background-color: #98A2B3;
+				position: absolute;
+				left: 0;
+				transform: translateY(-50%);
+				border-radius: 8px;
+			}
+		}
+		.st_col_title {
+			font-size: 20px;
+		}
+		.st_col_text {
+			color: #000;
+			font-size: 18px;
+			margin-bottom: 0;
+			p {
+				margin: 0;
+			}
+		}
+	}
+	&.style-5 {
+		.st_info_boxes_inner {
+			gap: 32px;
+		}
+		.st_intro {
+			text-align: center;
+		}
+		.intro_title {
+			span {
+				color: var(--color-1);
+			}
+		}
+		.st_col {
+			background-color: #475467;
+			border-radius: 12px;
+			padding: var(--space-5);
+
+		}
+		.ib_image {
+			max-width: 35px;
+			height: auto;
+			margin-bottom: 3.5rem;
+		}
+		.st_col_text {
+			color: #EAECF0;
+			font-size: 16px;
+			margin-bottom: 0;
+			strong {
+				color: #fff;
+			}
+			p {
+				margin: 0;
+			}
+		}
+	}
+}
