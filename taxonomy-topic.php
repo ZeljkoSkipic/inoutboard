@@ -38,7 +38,7 @@ if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) :
 			the_post();	?>
 			<article class="ha_article st_accordion-item">
-				<h2 class="article_title st_accordion-header"><?php the_title(); ?></h2>
+				<h2 class="article_title st_accordion-header" id="<?php echo wp_kses_post( get_field('accordion_anchor') ); ?>"><?php the_title(); ?></h2>
 				<div class="article_content st_accordion-body"><?php the_content(); ?></div>
 			</article>
 

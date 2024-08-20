@@ -4,7 +4,9 @@
 			display: flex;
 			flex-direction: column;
 		}
-
+		.ib_image {
+			object-fit: contain;
+		}
 		.st_col_text {
 			font-size: 14px;
 			font-family: Secondary, sans-serif;
@@ -36,19 +38,6 @@
 		.st_info_boxes_inner {
 			margin-top: -16px;
 			position: relative;
-			@include tab-min {
-				padding-right: calc(7.5rem - 16px);
-			}
-			&::before {
-				content: "";
-				position: absolute;
-				top: calc(-7.5rem + 16px);
-				right: 0;
-				background-image: url(../icons/ib-shape.svg);
-				width: 15rem;
-				height: 15rem;
-				z-index: -1;
-			}
 		}
 		.st_col {
 			border-radius: 12px;
@@ -91,6 +80,9 @@
 				margin-bottom: 2%;
 			}
 		}
+		.st_col {
+			position: relative;
+		}
 		.block_bg {
 			img {
 				object-fit: contain;
@@ -107,6 +99,23 @@
 				margin-bottom: 2rem;
 			}
 		}
+		.vimeo_video {
+			font-size: 12px;
+			color: #fff;
+			border: 3px solid var(--color-1);
+			padding: 1rem 1.4rem;
+			font-weight: 700;
+			border-radius: 10px;
+			text-align: center;
+			position: absolute;
+			left: 98px;
+			top: 10px;
+			transition: var(--st);
+			&:hover {
+				background-color: var(--color-1);
+			}
+
+		}
 		.st_col_title {
 			color: #fff;
 			font-size: 20px;
@@ -117,6 +126,13 @@
 		}
 	}
 	&.style-3 {
+		.prefix {
+			font-size: 18px;
+		}
+		.intro_text {
+			font-size: 24px;
+			font-weight: 500;
+		}
 		.container {
 			position: relative;
 			&::before {
@@ -161,11 +177,11 @@
 			}
 		}
 		.ib_image {
-			max-width: 98px;
-			max-height: 72px;
+			max-width: 67px;
+			max-height: 55px;
 			object-fit: contain;
 			object-position: left;
-			margin-bottom: 19px;
+			margin-bottom: 15px;
 			@include mob-only {
 				margin-bottom: 2rem;
 			}
@@ -224,7 +240,8 @@
 
 		}
 		.ib_image {
-			max-width: 35px;
+			max-width: 67px;
+			max-height: 55px;
 			height: auto;
 			margin-bottom: 3.5rem;
 		}

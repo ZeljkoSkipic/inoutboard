@@ -52,6 +52,7 @@
 						array(
 							'theme_location' => 'main',
 							'menu_id'        => 'primary-menu',
+							'walker'		 => new CustomMenuWalker
 						)
 					);
 					?>

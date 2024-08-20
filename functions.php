@@ -79,6 +79,9 @@ function stier_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'stier_scripts' );
 
+// Include Custom Menu Walker
+require get_template_directory() . '/includes/custom-menu-walker.php';
+
 // Login Styles
 function stier_login_styles() {
     wp_enqueue_style( 'login-style', get_template_directory_uri() . '/assets/dist/wp-login.css' );

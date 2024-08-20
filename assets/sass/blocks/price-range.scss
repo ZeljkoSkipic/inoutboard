@@ -1,5 +1,9 @@
 
 .st_price_slider {
+	.prefix {
+		font-size: 18px;
+		font-weight: 700;
+	}
 	.st_intro {
 		text-align: center;
 
@@ -59,23 +63,89 @@
 	.slider-container-after {
 		max-width: 74rem;
 		margin-inline: auto;
-		a {
+		.btn-1 {
 			width: 100%;
 		}
 	}
 	.estimated-price {
 		@include flex-between;
-		font-size: var(--font-size-3);
-		font-weight: 700;
+		padding-top: var(--space-5);
+		margin-bottom: 8px;
 		color: #1B232F;
-		padding-block: var(--space-5);
-		.right {
-			color: var(--color-1);
-			.month {
-				color: #1B232F;
-				font-size: 18px;
+		.frequency_text {
+			font-size: var(--font-size-3);
+			font-weight: 700;
+		}
+		&.max-value {
+			justify-content: flex-end;
+			.frequency_text, .currency, .frequency {
+				display: none;
+			}
+			.price_value {
+				background-image: url(../icons/phone-call.svg);
+				background-repeat: no-repeat;
+				background-position: center left;
+				padding-left: 42px;
 			}
 		}
+	}
+	.anual-price {
+		display: flex;
+		justify-content: space-between;
+		color: #1B232F;
+		display: flex;
+		align-items: center;
+		.range_price {
+			flex-shrink: 0;
+			margin-left: 16px;
+		}
+		@include limbo-min {
+			background-image: url(../icons/checkmark.svg);
+			background-size: 26px;
+			background-repeat: no-repeat;
+			background-position: center left;
+			padding-left: 40px;
+		}
+		@include tab-max {
+			align-items: flex-end;
+		}
+		.frequency_text {
+			font-size: var(--font-size-5);
+			font-weight: 700;
+			color: #1B232F;
+		}
+		&.max-value {
+			display: none;
+		}
+		&:not(.max-value) {
+			+ .phone {
+				display: none;
+			}
+		}
+	}
+	.phone {
+		margin-left: auto;
+		margin-right: 0;
+		font-size: var(--font-size-3);
+    	font-weight: 700;
+		color: var(--color-3);
+		display: flex;
+		width: fit-content;
+	}
+	.range_price {
+		color: var(--color-1);
+		.frequency {
+			color: #1B232F;
+			font-size: 18px;
+		}
+	}
+	.price {
+		font-size: var(--font-size-3);
+		font-weight: 700;
+	}
+	.frequency {
+		font-size: 18px;
+		font-weight: 700;
 	}
 	.number_of_users {
 		color: #667085;
@@ -145,5 +215,8 @@
 	input[type="range"]::-moz-range-thumb:hover {
 		background: var(--color-1);
 		border-color: var(--color-1);
+	}
+	.btn-1 {
+		margin-top: var(--space-4);
 	}
 }

@@ -12,30 +12,17 @@ get_header();
 <?php
 while ( have_posts() ) :
 the_post(); ?>
-<main id="primary" class="site-main container">
-	<article class="post_main">
-		<?php
-		the_title( '<h1 class="title-1">', '</h1>' );
-		the_field('intro');
-		echo get_the_date();
-		the_content(); ?>
+<main id="primary" class="site-main">
+	<header class="help_articles_hero">
+		<div class="container">
+			<?php the_title( '<h1 class="hc_hero_subtitle">', '</h1>' ); ?>
+		</div>
+	</header>
+	<article class="post_main container space_1">
+		<?php the_content(); ?>
 	</article>
-	<aside class="post_sidebar">
-		This is a post sidebar
-	</aside>
-
 </main><!-- #main -->
-
-<div class="container">
-	<?php the_post_navigation(
-		array(
-			'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'stier' ) . '</span> <span class="nav-title">%title</span>',
-			'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'stier' ) . '</span> <span class="nav-title">%title</span>',
-		)
-	);
-	endwhile; // End of the loop.
-	?>
-</div>
+<?php endwhile; ?>
 
 <?php
 get_footer();

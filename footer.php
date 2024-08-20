@@ -97,6 +97,11 @@
 					} ?>
 				</div>
 				<div class="footer_bottom_col copy">
+					<?php
+					$above_copyright_image = get_field('above_copyright_image', 'option');
+					if( $above_copyright_image ) {
+						echo wp_get_attachment_image( $above_copyright_image, $size, "", array( "class" => "above_copyright_image" ) );
+					} ?>
 					<?php echo wp_kses_post( get_field('copy', 'option') ); ?>
 				</div>
 				<div class="footer_bottom_col socials">

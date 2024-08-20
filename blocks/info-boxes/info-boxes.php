@@ -59,13 +59,16 @@ if ( ! empty( $block['className'] ) ) {
 				$title = get_sub_field('title');
                 $text = get_sub_field('text');
 				$ib_image = get_sub_field('ib_image');
+				$vimeo_id = get_sub_field('vimeo_id');
                 $size = 'full'; ?>
                 <div class="st_col column">
 					<?php
 					if( $ib_image ) {
 						echo wp_get_attachment_image( $ib_image, $size, "", array( "class" => "ib_image" ) );
 					} ?>
-
+					<?php if( $vimeo_id ) { ?>
+					<a href="https://vimeo.com/<?php echo $vimeo_id ?>" class="vimeo_video" aria-label="Watch Video" data-fancybox>Watch Our Video Tutorial</a>
+					<?php } ?>
 					<?php if($title) { ?>
                    	<h3 class="st_col_title"><?php echo $title; ?></h3>
 					<?php } ?>

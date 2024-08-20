@@ -123,7 +123,7 @@
                     "label": "Number of users",
                     "name": "value",
                     "aria-label": "",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -133,20 +133,18 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "min": "",
-                    "max": "",
+                    "maxlength": "",
                     "placeholder": "",
-                    "step": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_6682b8cfff208"
                 },
                 {
                     "key": "field_6682b8faff20b",
-                    "label": "Price",
+                    "label": "Monthly Price",
                     "name": "price",
                     "aria-label": "",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -156,10 +154,29 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "min": "",
-                    "max": "",
+                    "maxlength": "",
                     "placeholder": "",
-                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6682b8cfff208"
+                },
+                {
+                    "key": "field_66bb52d390cef",
+                    "label": "Yearly Price",
+                    "name": "yearly_price",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_6682b8cfff208"
@@ -201,6 +218,46 @@
                 "id": ""
             },
             "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66bb59d829bff",
+            "label": "Annual Text",
+            "name": "annual_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Purchase Annually and Get 1 Month FREE",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66bb62b791281",
+            "label": "Phone Number to Call",
+            "name": "phone_number",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "(833)-835-277",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -321,5 +378,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721060805
+    "modified": 1723556567
 }

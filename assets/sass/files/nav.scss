@@ -131,8 +131,8 @@
 					top: -1px;
 					cursor: pointer;
 					transition: var(--st);
-					svg {
-					stroke: var(--color-1);
+					path {
+						stroke: var(--color-1);
 					}
 				}
 			}

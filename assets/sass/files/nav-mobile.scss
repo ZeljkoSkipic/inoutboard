@@ -99,6 +99,10 @@ label[for="nav-toggle"] {
 					transform: rotate(45deg);
 					transition: var(--st);
 					display: inline-flex;
+					svg {
+						width: 20px;
+						height: 20px;
+					}
 				}
 				> .sub-menu {
 					width: 100%;

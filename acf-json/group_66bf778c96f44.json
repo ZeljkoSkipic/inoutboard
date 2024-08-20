@@ -1,0 +1,45 @@
+{
+    "key": "group_66bf778c96f44",
+    "title": "Article Anchor",
+    "fields": [
+        {
+            "key": "field_66bf778d82946",
+            "label": "Accordion Anchor",
+            "name": "accordion_anchor",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "One word, no spaces.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "help-center"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1723824374
+}
